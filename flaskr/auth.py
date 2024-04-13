@@ -63,9 +63,7 @@ def login():
         user = db.execute(
             'SELECT * FROM user WHERE email = ?', (email,)
         ).fetchone()
-        print(user['email'])
-        print(user['password'])
-        print(user['id'])
+        
 
         if user is None:
             error = 'Incorrect email address.'
